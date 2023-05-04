@@ -1,11 +1,9 @@
 package edu.eci.cvds.servlet.services;
 
-import edu.eci.cvds.servlet.model.Appointment;
 import edu.eci.cvds.servlet.model.User;
 import edu.eci.cvds.servlet.repositories.UserRepository;
 import edu.eci.cvds.exception.Exception;
 
-import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

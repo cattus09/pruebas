@@ -18,6 +18,7 @@ public class UserBean implements Serializable {
     UserService userService;
     private long id;
     private String name;
+    private int telephone;
     private String email;
     private String password;
 
@@ -51,6 +52,14 @@ public class UserBean implements Serializable {
 
     public void setPassword(String password){
         this.password = password;
+    }
+    
+    public int getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(int telephone) {
+        this.telephone = telephone;
     }
 
 }

@@ -73,5 +73,9 @@ public class AppointmentBean implements Serializable {
     public void setDescription(String description){
         this.description = description;
     }
+
+    public String logiregistern (){
+            return "nextPage.xhtml";
+    }
 }
 

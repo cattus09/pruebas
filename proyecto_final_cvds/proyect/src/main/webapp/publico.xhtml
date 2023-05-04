@@ -20,22 +20,22 @@
             <p:outputLabel value="Correo electrónico:" for="email" showRequired="false"/>
             <p:inputText class="entrada" id="email" value="#{userBean.email}" required="true"/>
             
-            <p:outputLabel value="Teléfono de contacto:" for="telefonoContacto" showRequired="false"/>
-            <p:inputText class="entrada" id="telefonoContacto" value="#{consultaBean.telefonoContacto}" required="true"/>
+            <p:outputLabel value="Teléfono de contacto:" for="telephone" showRequired="false"/>
+            <p:inputText class="entrada" id="telephone" value="#{userBean.telephone}" required="true"/>
             
-            <p:outputLabel value="Descripción de la consulta:" for="descripcionConsulta" showRequired="false"/>
-            <p:inputTextarea class="entrada" id="descripcionConsulta" value="#{consultaBean.descripcionConsulta}" rows="5"/>
+            <p:outputLabel value="Descripción de la consulta:" for="description" showRequired="false"/>
+            <p:inputTextarea class="entrada" id="description" value="#{AppointmentBean.description}" rows="5"/>
 
-            <p:outputLabel value="Fecha:" for="fecha" showRequired="false"/>
-            <p:calendar class="entrada" id="fecha" value="#{consultaBean.fecha}" showButtonPanel="true"/>
+            <p:outputLabel value="Fecha:" for="startDate" showRequired="false"/>
+            <p:calendar class="entrada" id="startDate" value="#{AppointmentBean.startDate}" showButtonPanel="true"/>
             
-            <p:outputLabel value="Acepto los términos y condiciones:" for="terminosYCondiciones" showRequired="false"/>
-            <p:selectBooleanCheckbox id="terminosYCondiciones" value="#{consultaBean.aceptaTerminosYCondiciones}" required="true"/>
+            <p:outputLabel value="Acepto los términos y condiciones:" for="termsAccepted" showRequired="false"/>
+            <p:selectBooleanCheckbox id="termsAccepted" value="#{AppointmentBean.termsAccepted}" required="true"/>
             <p:commandLink value="Ver términos y condiciones" onclick="PF('dlgTerminosCondiciones').show(); return false;"/>
             
         </p:panelGrid>
         
-        <p:commandButton class="boton-formulario" value="Registrar consulta" action="#{consultaBean.registrarConsulta}" ajax="false"/>
+        <p:commandButton class="boton-formulario" value="Registrar consulta" action="#{AppointmentBean.register}" ajax="false"/>
     </h:form>
     
     <p:dialog header="Términos y condiciones" widgetVar="dlgTerminosCondiciones" modal="true">
