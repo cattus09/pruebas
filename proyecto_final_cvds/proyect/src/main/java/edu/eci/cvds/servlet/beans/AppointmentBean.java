@@ -75,7 +75,7 @@ public class AppointmentBean implements Serializable {
     }
 
     public String logiregistern (){
-            return "nextPage.xhtml";
+        return "nextPage.xhtml";
     }
 }
 
